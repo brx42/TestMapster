@@ -8,6 +8,11 @@ namespace TestMapster.Dto;
 public class EmployeeSecondDto
 {
     /// <summary>
+    /// Идентификатор сотрудника.
+    /// </summary>
+    public Guid DtoId { get; set; }
+
+    /// <summary>
     /// Имя сотрудника.
     /// </summary>
     public string DtoName { get; set; }

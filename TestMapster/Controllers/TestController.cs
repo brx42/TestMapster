@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MapsterMapper;
+using Microsoft.AspNetCore.Mvc;
+using TestMapster.Dto;
 using TestMapster.Enum;
 using TestMapster.Models;
 
@@ -41,44 +43,71 @@ public class TestController : ControllerBase
             }
         }
     };
-    
+
+    private readonly IMapper _mapper;
+
+    public TestController(IMapper mapper)
+    {
+        _mapper = mapper;
+    }
+
     /// <summary>
     /// Получить организацию.
     /// </summary>
     /// <returns>Организация.</returns>
-    [HttpGet("simple")]
-    public ActionResult<Organization> SimpleOrganization()
+    [HttpGet("simple-first")]
+    public ActionResult<Organization> SimpleOrganizationFirst()
     {
-        return Ok();
+        var organizationDto = _mapper.Map<OrganizationFirstDto>(_organization);
+
+        var result = _mapper.Map<Organization>(organizationDto);
+        
+        return Ok(result);
     }
 
     /// <summary>
     /// Получить коллекцию организаций.
     /// </summary>
     /// <returns>Коллекция организаций.</returns>
-    [HttpGet("collection")]
-    public ActionResult<IEnumerable<Organization>> CollectionOrganization()
+    [HttpGet("collection-first")]
+    public ActionResult<IEnumerable<Organization>> CollectionOrganizationFirst()
     {
-        return Ok();
+        var organizations = new List<Organization> { _organization };
+        
+        var organizationsDto = _mapper.Map<IEnumerable<OrganizationFirstDto>>(organizations);
+
+        var result = _mapper.Map<IEnumerable<Organization>>(organizationsDto);
+        
+        return Ok(result);
     }
 
     /// <summary>
     /// Получить организацию асинхронно.
     /// </summary>
     /// <returns>Организация.</returns>
-    [HttpGet("simple-async")]
-    public async Task<ActionResult<Organization>> SimpleOrganizationAsync()
+    [HttpGet("simple-second")]
+    public ActionResult<Organization> SimpleOrganizationSecond()
     {
-        return Ok();
+        var organizationDto = _mapper.Map<OrganizationSecondDto>(_organization);
+
+        var result = _mapper.Map<Organization>(organizationDto);
+        
+        return Ok(result);
     }
 
     /// <summary>
     /// Получить коллекцию организаций асинхронно.
     /// </summary>
     /// <returns>Коллекция организаций.</returns>
-    [HttpGet("collection-async")]
-    public async Task<ActionResult<IEnumerable<Organization>>> CollectionOrganizationAsync()
+    [HttpGet("collection-second")]
+    public ActionResult<IEnumerable<Organization>> CollectionOrganizationSecond()
     {
-        return Ok();
+        var organizations = new List<Organization> { _organization };
+
+        var organizationsDto = _mapper.Map<IEnumerable<OrganizationSecondDto>>(organizations);
+
+        var result = _mapper.Map(organizationsDto, organizations);
+        
+        return Ok(result);
     }
 }

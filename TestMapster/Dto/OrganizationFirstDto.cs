@@ -6,6 +6,11 @@
 public class OrganizationFirstDto
 {
     /// <summary>
+    /// Идентификатор организации.
+    /// </summary>
+    public int Id { get; set; }
+    
+    /// <summary>
     /// Название организации.
     /// </summary>
     public string Name { get; set; }

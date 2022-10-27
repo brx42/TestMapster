@@ -1,9 +1,13 @@
+using TestMapster.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddMapster();
 
 var app = builder.Build();
 
