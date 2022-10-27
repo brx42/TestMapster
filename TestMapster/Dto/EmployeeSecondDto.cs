@@ -28,9 +28,4 @@ public class EmployeeSecondDto
     /// Идентификатор организации.
     /// </summary>
     public int DtoOrganizationId { get; set; }
-    
-    /// <summary>
-    /// Организация.
-    /// </summary>
-    public OrganizationSecondDto DtoOrganization { get; set; }
 }
