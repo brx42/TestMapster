@@ -3,34 +3,34 @@
 namespace TestMapster.Dto;
 
 /// <summary>
-/// Первое Dto сотрудника.
+/// Второе Dto сотрудника.
 /// </summary>
-public class EmployeeFirstDto
+public class EmployeeHardDto
 {
     /// <summary>
     /// Идентификатор сотрудника.
     /// </summary>
-    public Guid Id { get; set; }
-    
+    public Guid DtoId { get; set; }
+
     /// <summary>
     /// Имя сотрудника.
     /// </summary>
-    public string Name { get; set; }
+    public string DtoName { get; set; }
     
     /// <summary>
     /// Фамилия сотрудника.
     /// </summary>
-    public string LastName { get; set; }
+    public string DtoLastName { get; set; }
 
     /// <summary>
     /// Номер телефона.
     /// 1 - Первый номер.
     /// 2 - Второй номер.
     /// </summary>
-    public PhoneNumber PhoneNumber { get; set; }
+    public PhoneNumber DtoPhoneNumber { get; set; }
 
     /// <summary>
     /// Идентификатор организации.
     /// </summary>
-    public int OrganizationId { get; set; }
+    public int DtoOrganizationId { get; set; }
 }

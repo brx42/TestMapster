@@ -52,13 +52,13 @@ public class TestController : ControllerBase
     }
 
     /// <summary>
-    /// Получить организацию.
+    /// Получить организацию с обычным маппингом.
     /// </summary>
     /// <returns>Организация.</returns>
     [HttpGet("simple-first")]
     public ActionResult<Organization> SimpleOrganizationFirst()
     {
-        var organizationDto = _mapper.Map<OrganizationFirstDto>(_organization);
+        var organizationDto = _mapper.Map<OrganizationLiteDto>(_organization);
 
         var result = _mapper.Map<Organization>(organizationDto);
         
@@ -66,7 +66,7 @@ public class TestController : ControllerBase
     }
 
     /// <summary>
-    /// Получить коллекцию организаций.
+    /// Получить коллекцию организаций с обычным маппингом.
     /// </summary>
     /// <returns>Коллекция организаций.</returns>
     [HttpGet("collection-first")]
@@ -74,7 +74,7 @@ public class TestController : ControllerBase
     {
         var organizations = new List<Organization> { _organization };
         
-        var organizationsDto = _mapper.Map<IEnumerable<OrganizationFirstDto>>(organizations);
+        var organizationsDto = _mapper.Map<IEnumerable<OrganizationLiteDto>>(organizations);
 
         var result = _mapper.Map<IEnumerable<Organization>>(organizationsDto);
         
@@ -82,13 +82,13 @@ public class TestController : ControllerBase
     }
 
     /// <summary>
-    /// Получить организацию асинхронно.
+    /// Получить организацию со сложным маппингом.
     /// </summary>
     /// <returns>Организация.</returns>
     [HttpGet("simple-second")]
     public ActionResult<Organization> SimpleOrganizationSecond()
     {
-        var organizationDto = _mapper.Map<OrganizationSecondDto>(_organization);
+        var organizationDto = _mapper.Map<OrganizationHardDto>(_organization);
 
         var result = _mapper.Map<Organization>(organizationDto);
         
@@ -96,7 +96,7 @@ public class TestController : ControllerBase
     }
 
     /// <summary>
-    /// Получить коллекцию организаций асинхронно.
+    /// Получить коллекцию организаций со сложным маппингом.
     /// </summary>
     /// <returns>Коллекция организаций.</returns>
     [HttpGet("collection-second")]
@@ -104,7 +104,7 @@ public class TestController : ControllerBase
     {
         var organizations = new List<Organization> { _organization };
 
-        var organizationsDto = _mapper.Map<IEnumerable<OrganizationSecondDto>>(organizations);
+        var organizationsDto = _mapper.Map<IEnumerable<OrganizationHardDto>>(organizations);
 
         var result = _mapper.Map(organizationsDto, organizations);
         

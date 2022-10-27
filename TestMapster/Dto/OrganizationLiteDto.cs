@@ -1,27 +1,27 @@
 ﻿namespace TestMapster.Dto;
 
 /// <summary>
-/// Второе Dto организации.
+/// Первое Dto организации.
 /// </summary>
-public class OrganizationSecondDto
+public class OrganizationLiteDto
 {
     /// <summary>
     /// Идентификатор организации.
     /// </summary>
-    public int DtoId { get; set; }
+    public int Id { get; set; }
     
     /// <summary>
     /// Название организации.
     /// </summary>
-    public string DtoName { get; set; }
+    public string Name { get; set; }
     
     /// <summary>
     /// Является ли юридическим лицом.
     /// </summary>
-    public bool DtoIsLegalEntity { get; set; }
+    public bool IsLegalEntity { get; set; }
     
     /// <summary>
     /// Коллекция сотрудников в организации.
     /// </summary>
-    public ICollection<EmployeeSecondDto> DtoEmployees { get; set; }
+    public ICollection<EmployeeLiteDto> Employees { get; set; }
 }
