@@ -5,30 +5,7 @@
     <projectFile profileName="TestMapster">TestMapster/TestMapster.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df2259d-e8a8-467e-ad7a-2b3fd64dffb3" name="Changes" comment="#4 Изменение некоторых названий и обновление профилей маппинга">
-      <change afterPath="$PROJECT_DIR$/MapsterSample.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapsterTests/UnitTests/MapsterTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestMapster/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestMapster/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestMapster/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestMapster/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/Controllers/TestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/Controllers/TestController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/Dto/EmployeeHardDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/Dto/EmployeeHardDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/Dto/EmployeeLiteDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/Dto/EmployeeLiteDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/Dto/OrganizationHardDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/Dto/OrganizationHardDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/Dto/OrganizationLiteDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/Dto/OrganizationLiteDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/Enum/PhoneNumber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/Enum/PhoneNumber.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/Extensions/MapsterExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/Extensions/MapsterExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/MapsterProfile/EmployeeProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/MapsterProfile/EmployeeProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/MapsterProfile/OrganizationProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/MapsterProfile/OrganizationProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/Models/Employee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/Models/Employee.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/Models/Organization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/Models/Organization.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/TestMapster.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/MapsterSample.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestMapster/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MapsterSample/appsettings.json" afterDir="false" />
-    </list>
+    <list default="true" id="5df2259d-e8a8-467e-ad7a-2b3fd64dffb3" name="Changes" comment="#4 Изменение некоторых названий и обновление профилей маппинга" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +47,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "vcs.Git",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
