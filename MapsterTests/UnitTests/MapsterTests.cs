@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using Mapster;
 using TestMapster.Dto;
+using TestMapster.MapsterProfile;
 using TestMapster.Models;
 using Xunit;
 
@@ -20,8 +21,16 @@ public class MapsterTests
         // Явная конфигурация для маппинга, с подробным описанием полей - сопоставление/игнорирование.
         // По умолчанию - false.
         config.RequireDestinationMemberSource = true;
+
+        var assemblies = new[]
+        {
+            Assembly.GetAssembly(typeof(EmployeeProfile)),
+            Assembly.GetAssembly(typeof(OrganizationProfile)), 
+        };
+
+        config.Scan(assemblies);
+        // config.Scan(Assembly.GetAssembly(typeof(Program)));
         
-        config.Scan(Assembly.GetExecutingAssembly());
         config.Compile();
     }
 
